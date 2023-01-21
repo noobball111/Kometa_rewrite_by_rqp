@@ -1,4 +1,4 @@
-local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/noobball111/Kometa_rewrite_by_rqp/main/kometa_v1_api_rewritten.lua"))()
+local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/noobball111/Kometa_rewrite_by_rqp/main/kometa_v1_api_rewrote.lua"))()
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/ui/finity.lua"))()
 local bssapi = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/api/bssapi.lua"))()
 
@@ -728,7 +728,7 @@ function makesprinklers()
 					task.wait(.1)
 					api.humanoid().Jump = true
 				else
-					api.tweenDelay(1.5, (CFrame.new(FieldBounds[3]))
+					api.tweenDelay(1.5, CFrame.new(FieldBounds[3]))
 					task.wait(.1)
 					api.humanoid().Jump = true
 				end
