@@ -49,7 +49,6 @@ local kometa = {
 		temp_time = distance/speed
   		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y + 5, pos.Z)}):Play()
 		createplatform(temp_time)
-		task.wait(temp_time)
 	end,
 	["tweenNoDelay"] = function(time, pos) -- tween to position by (time) + (frame)
 		speed = 62 --studs/second
@@ -58,7 +57,6 @@ local kometa = {
 		temp_time = distance/speed
 		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y + 5, pos.Z)}):Play()
 		createplatform(temp_time)
-		task.wait(temp_time)
 	end,
     ["walkTo"] = function(v3) -- walk to position (not pathfinding)
        game:GetService("Players").LocalPlayer.Character.Humanoid:MoveTo(v3) 
