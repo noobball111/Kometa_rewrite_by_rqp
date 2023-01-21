@@ -1268,6 +1268,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.autospawnsprout and CheckToyCooldown('Sprout Summoner') then
@@ -1278,6 +1279,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.autodispense then
@@ -1290,6 +1292,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 		if kometa.dispensesettings.blub and CheckToyCooldown('Blueberry Dispenser') then
@@ -1301,6 +1304,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 		if kometa.dispensesettings.straw and CheckToyCooldown('Strawberry Dispenser') then
@@ -1312,6 +1316,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 		if kometa.dispensesettings.treat and CheckToyCooldown('Treat Dispenser') then
@@ -1323,6 +1328,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 		if kometa.dispensesettings.coconut and CheckToyCooldown('Coconut Dispenser') then
@@ -1334,6 +1340,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 		if kometa.dispensesettings.glue and CheckToyCooldown('Glue Dispenser') then
@@ -1345,6 +1352,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 	end
@@ -1358,6 +1366,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 		if kometa.dispensesettings.red and CheckToyCooldown('Red Field Booster') then
@@ -1369,6 +1378,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
+			task.wait(5)
 			kometa.toggles.autofarm = true
 		end
 		if kometa.dispensesettings.blue and CheckToyCooldown('Blue Field Booster') then
@@ -1381,6 +1391,7 @@ function UseDispensers()
 				task.wait()
 			end 
 		end
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.clock and CheckToyCooldown('Wealth Clock') then
@@ -1392,6 +1403,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.freeantpass and CheckToyCooldown('Free Ant Pass Dispenser') and rtsg().Eggs.AntPass < 10 then
@@ -1403,6 +1415,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.freerobopass and CheckToyCooldown('Free Robo Pass Dispenser') and rtsg().Eggs.RoboPass < 10 then
@@ -1414,6 +1427,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.autosamovar and CheckToyCooldown("Samovar") and game:GetService("Workspace").Toys['Samovar']:FindFirstChild("ModelAfter") then
@@ -1433,6 +1447,7 @@ function UseDispensers()
 				repeat task.wait() api.Tween(3, v.Position) until not v or not v.Parent
 			end
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.autostockings and CheckToyCooldown("Stockings") and game:GetService("Workspace").Toys['Stockings']:FindFirstChild("ModelAfter") then
@@ -1444,6 +1459,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.autoonettart and CheckToyCooldown("Onett's Lid Art") and game:GetService("Workspace").Toys["Onett's Lid Art"]:FindFirstChild("ModelAfter") then
@@ -1455,6 +1471,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.autocandles and CheckToyCooldown("Honeyday Candles") and game:GetService("Workspace").Toys['Honeyday Candles']:FindFirstChild("ModelAfter") then
@@ -1466,6 +1483,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 	if kometa.toggles.autofeast and CheckToyCooldown('Beesmas Feast') and game:GetService("Workspace").Toys['Beesmas Feast']:FindFirstChild("ModelAfter") then
@@ -1477,6 +1495,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end
+		task.wait(5)
 		kometa.toggles.autofarm = true
 	end
 end
@@ -2155,7 +2174,7 @@ task.spawn(function() while task.wait(.1) do
 				if not donotdonatedrop then game.ReplicatedStorage.Events.WindShrineTrigger:FireServer() end
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-Vector3.new(-484, 142, 413)).magnitude < 35 and v.CFrame.YVector.Y == 1 then
-						api.humanoidrootpart().CFrame = v.CFrame
+						api.tween(3, v.Position)
 					end
 				end
 			end
@@ -2163,7 +2182,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys.Samovar.Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.humanoidrootpart().CFrame = v.CFrame
+						api.tween(3, v.Position)
 					end
 				end
 			end
@@ -2171,7 +2190,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys.Stockings.Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.humanoidrootpart().CFrame = v.CFrame
+						api.tween(3, v.Position)
 					end
 				end
 			end
@@ -2179,7 +2198,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys["Onett's Lid Art"].Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.humanoidrootpart().CFrame = v.CFrame
+						api.tween(3, v.Position)
 					end
 				end
 			end
@@ -2187,7 +2206,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys["Honeyday Candles"].Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.humanoidrootpart().CFrame = v.CFrame
+						api.tween(3, v.Position)
 					end
 				end
 			end
@@ -2195,7 +2214,8 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys["Beesmas Feast"].Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.humanoidrootpart().CFrame = v.CFrame
+						--api.humanoidrootpart().CFrame = v.CFrame
+						api.tween(3, v.Position)
 					end
 				end
 			end
