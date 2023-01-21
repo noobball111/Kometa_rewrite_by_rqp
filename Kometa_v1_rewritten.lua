@@ -728,7 +728,7 @@ function makesprinklers()
 					task.wait(.1)
 					api.humanoid().Jump = true
 				else
-					api.tweenDelay(1.5, (CFrame.new(FieldBounds[3]))
+					api.tweenDelay(1.5, CFrame.new(FieldBounds[3]))
 					task.wait(.1)
 					api.humanoid().Jump = true
 				end
