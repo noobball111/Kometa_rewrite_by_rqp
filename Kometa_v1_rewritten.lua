@@ -585,7 +585,8 @@ function farmcombattokens(v, pos, type)
 					task.wait()
 					api.walkTo(v.Position)
 				until not v.Parent or v.CFrame.YVector.Y ~= 1 or not v
-				api.teleport(pos)
+				--api.teleport(pos)
+				api.tweenDelay(0.5, pos)
 			end
 		end
 	elseif type == 'snail' then
@@ -595,7 +596,7 @@ function farmcombattokens(v, pos, type)
 					task.wait()
 					api.walkTo(v.Position)
 				until not v.Parent or v.CFrame.YVector.Y ~= 1 or not v
-				api.teleport(pos)
+				api.tweenDelay(0.5, pos)
 			end
 		end
 	elseif type == 'mondo' then
@@ -606,7 +607,7 @@ function farmcombattokens(v, pos, type)
 					task.wait()
 					api.tweenNoDelay(0.5, v.CFrame)
 				until not v.Parent or v.CFrame.YVector.Y ~= 1 or not v
-				api.teleport(pos)
+				api.tweenDelay(0.5, pos)
 			end
 		end
 	end
@@ -714,20 +715,20 @@ function makesprinklers()
 			end
 			api.humanoid().JumpPower = 70
 			if Amount == 1 then
-				api.teleport(CFrame.new(FieldSelected.Position))
+				api.tweenDelay(1.5, CFrame.new(FieldSelected.Position))
 				task.wait(.1)
 				api.humanoid().Jump = true
 			elseif Amount ~= 2 then
-				api.teleport(CFrame.new(FieldBounds[Index]))
+				api.tweenDelay(1.5, CFrame.new(FieldBounds[Index]))
 				task.wait(.1)
 				api.humanoid().Jump = true
 			else
 				if Index == 1 then
-					api.teleport(CFrame.new(FieldBounds[1]))
+					api.tweenDelay(1.5, CFrame.new(FieldBounds[1]))
 					task.wait(.1)
 					api.humanoid().Jump = true
 				else
-					api.teleport(CFrame.new(FieldBounds[3]))
+					api.tweenDelay(1.5, (CFrame.new(FieldBounds[3]))
 					task.wait(.1)
 					api.humanoid().Jump = true
 				end
@@ -983,8 +984,13 @@ function collectplanters()
 		if planterToCollect == nil then continue end
 		-- print(v[1], v[4], planterToCollect.growth, planterToCollect.growth <= v[4])
 		if planterToCollect.enabled and planterToCollect.growth <= v[4] then
-			api.teleport(CFrame.new(v[3]))
-			game:GetService("ReplicatedStorage").Events.PlanterModelCollect:FireServer(v[2])
+			--api.teleport(CFrame.new(v[3]))
+			api.tween(0.5, game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
+			--game:GetService("ReplicatedStorage").Events.PlanterModelCollect:FireServer(v[2])
+			for i = 1,3 do
+				VirtualPressButton("E")
+				task.wait()
+			end
 			task.wait(1)
 			-- game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = v.." Planter"})
 			for i = 1, 5 do gettoken(CFrame.new(v[3]).Position) end
@@ -1011,9 +1017,11 @@ function plantplanters()
 		if v.enabled then
 			if planterst[v.Type][1] ~= nil then continue end
 			-- if planterst[v.Type][1] == v.Type then continue end
-			api.teleport(game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
+			--api.teleport(game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
+			api.tween(0.5, game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
 			task.wait(2)
-			api.teleport(game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
+			--api.teleport(game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
+			api.tween(0.5, game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
 			game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = v.Type.." Planter"})
 			task.wait(1)
 		end
