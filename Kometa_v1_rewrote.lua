@@ -1,4 +1,4 @@
-local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/noobball111/Kometa_rewrite_by_rqp/main/kometa_v1_api_rewrote.lua"))()
+local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/noobball111/Kometa_rewrite_by_rqp/main/kometa_v1_api_rewritten.lua"))()
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/ui/finity.lua"))()
 local bssapi = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/api/bssapi.lua"))()
 
@@ -973,7 +973,7 @@ function collectplanters()
 	-- end
 	for i,v in pairs(planterst) do
 		if v[1] == nil then continue end
-		planterToCollect = nil
+		local planterToCollect = nil
 		if kometa.planterssettings[1].Type == v[1] then 
 			planterToCollect = kometa.planterssettings[1]
 		elseif kometa.planterssettings[2].Type == v[1] then 
@@ -985,7 +985,7 @@ function collectplanters()
 		-- print(v[1], v[4], planterToCollect.growth, planterToCollect.growth <= v[4])
 		if planterToCollect.enabled and planterToCollect.growth <= v[4] then
 			--api.teleport(CFrame.new(v[3]))
-			api.tween(0.5, game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame)
+			api.tween(0.5, CFrame.new(game:GetService("Workspace").FlowerZones:FindFirstChild(v.field).CFrame))
 			--game:GetService("ReplicatedStorage").Events.PlanterModelCollect:FireServer(v[2])
 			for i = 1,3 do
 				VirtualPressButton("E")
