@@ -1444,7 +1444,7 @@ function UseDispensers()
 		for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 			if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 				--repeat task.wait() api.humanoidrootpart().CFrame = CFrame.new(v.CFrame.Position) until not v or not v.Parent
-				repeat task.wait() api.Tween(3, v.Position) until not v or not v.Parent
+				repeat task.wait() api.tweenDelay(1.5, v.Position) until not v or not v.Parent
 			end
 		end 
 		task.wait(5)
@@ -2174,7 +2174,7 @@ task.spawn(function() while task.wait(.1) do
 				if not donotdonatedrop then game.ReplicatedStorage.Events.WindShrineTrigger:FireServer() end
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-Vector3.new(-484, 142, 413)).magnitude < 35 and v.CFrame.YVector.Y == 1 then
-						api.tween(3, v.Position)
+						api.tweenDelay(1.5, v.Position)
 					end
 				end
 			end
@@ -2182,7 +2182,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys.Samovar.Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tween(3, v.Position)
+						api.tweenDelay(1.5, v.Position)
 					end
 				end
 			end
@@ -2190,7 +2190,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys.Stockings.Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tween(3, v.Position)
+						api.tweenDelay(1.5, v.Position)
 					end
 				end
 			end
@@ -2198,7 +2198,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys["Onett's Lid Art"].Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tween(3, v.Position)
+						api.tweenDelay(1.5, v.Position)
 					end
 				end
 			end
@@ -2206,7 +2206,7 @@ task.spawn(function() while task.wait(.1) do
 				platformm = game:GetService("Workspace").Toys["Honeyday Candles"].Platform
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tween(3, v.Position)
+						api.tweenDelay(1.5, v.Position)
 					end
 				end
 			end
@@ -2215,7 +2215,7 @@ task.spawn(function() while task.wait(.1) do
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						--api.humanoidrootpart().CFrame = v.CFrame
-						api.tween(3, v.Position)
+						api.tweenDelay(1.5, v.Position)
 					end
 				end
 			end
