@@ -9,6 +9,24 @@
 		rqp
 ]]
 
+function createplatform(Time)
+	if not game.Workspace.Terrain:FindFirstChild("Part") then
+		local timer = 0
+		local player = game:GetService("Players").LocalPlayer
+		local basepart = Instance.new("Part", game.Workspace.Terrain)
+		basepart.CanCollide = true
+		basepart.Anchored = true
+		basepart.Size = Vector3.new(10, 1, 10)
+
+		while (timer < Time) and task.wait(0.1) do
+			timer = timer + 0.1
+			local part = player.Character.LeftFoot
+			basepart.Position = Vector3.new(part.Position.X, part.Position.Y - .65, part.Position.Z)
+		end
+		basepart:Destroy()
+	end
+end
+
 local ver = 1
 
 local kometa = {
@@ -29,7 +47,8 @@ local kometa = {
 		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		temp_time = distance/speed
-  		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = pos}):Play() 
+  		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y + 5, pos.Z)}):Play()
+		createplatform(temp_time)
 		task.wait(temp_time)
 	end,
 	["tweenNoDelay"] = function(time, pos) -- tween to position by (time) + (frame)
@@ -37,7 +56,8 @@ local kometa = {
 		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		temp_time = distance/speed
-		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = pos}):Play() 
+		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y + 5, pos.Z)}):Play()
+		createplatform(temp_time)
 		task.wait(temp_time)
 	end,
     ["walkTo"] = function(v3) -- walk to position (not pathfinding)
