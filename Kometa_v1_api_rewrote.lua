@@ -48,7 +48,7 @@ local kometa = {
 		--distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		distance = plr.Position - Vector3.new(pos)
 		distance = Vector3.new(distance)
-		distance = sqrt(distance.X^2+distance.Y^2+distance.Z^2)
+		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
 		temp_time = distance/speed
   		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y --[[+5]], pos.Z)}):Play()
 		createplatform(temp_time)
@@ -59,7 +59,7 @@ local kometa = {
 		--distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		distance = plr.Position - Vector3.new(pos)
 		distance = Vector3.new(distance)
-		distance = sqrt(distance.X^2+distance.Y^2+distance.Z^2)
+		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
 		temp_time = distance/speed
 		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y --[[+5]], pos.Z)}):Play()
 		createplatform(temp_time)
