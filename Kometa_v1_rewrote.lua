@@ -1452,7 +1452,7 @@ function UseDispensers()
 		for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 			if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 				--repeat task.wait() api.humanoidrootpart().CFrame = CFrame.new(v.CFrame.Position) until not v or not v.Parent
-				repeat task.wait() api.tweenDelay(1.5, v.Position) until not v or not v.Parent
+				repeat task.wait() api.tweenDelay(.5, v.Position) until not v or not v.Parent
 			end
 		end 
 		task.wait(10)
@@ -2183,51 +2183,61 @@ task.spawn(function() while task.wait(.1) do
 				kometa.toggles.autofarm = false
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-Vector3.new(-484, 142, 413)).magnitude < 35 and v.CFrame.YVector.Y == 1 then
-						api.tweenDelay(1.5, v.Position)
+						api.tweenDelay(.5, v.Position)
 					end
 				end
 				kometa.toggles.autofarm = true
 			end
 			if kometa.toggles.autosamovar then
 				platformm = game:GetService("Workspace").Toys.Samovar.Platform
+				kometa.toggles.autofarm = false
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tweenDelay(1.5, v.Position)
+						api.tweenDelay(.5, v.Position)
 					end
 				end
+				kometa.toggles.autofarm = true
 			end
 			if kometa.toggles.autostockings then
 				platformm = game:GetService("Workspace").Toys.Stockings.Platform
+				kometa.toggles.autofarm = false
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tweenDelay(1.5, v.Position)
+						api.tweenDelay(.5, v.Position)
 					end
 				end
+				kometa.toggles.autofarm = true
 			end
 			if kometa.toggles.autoonettart then
 				platformm = game:GetService("Workspace").Toys["Onett's Lid Art"].Platform
+				kometa.toggles.autofarm = false
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tweenDelay(1.5, v.Position)
+						api.tweenDelay(.5, v.Position)
 					end
 				end
+				kometa.toggles.autofarm = true
 			end
 			if kometa.toggles.autocandles then
 				platformm = game:GetService("Workspace").Toys["Honeyday Candles"].Platform
+				kometa.toggles.autofarm = false
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						api.tweenDelay(1.5, v.Position)
+						api.tweenDelay(.5, v.Position)
 					end
 				end
+				kometa.toggles.autofarm = true
 			end
 			if kometa.toggles.autofeast then
 				platformm = game:GetService("Workspace").Toys["Beesmas Feast"].Platform
+				kometa.toggles.autofarm = false
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						--api.humanoidrootpart().CFrame = v.CFrame
-						api.tweenDelay(1.5, v.Position)
+						api.tweenDelay(.5, v.Position)
 					end
 				end
+				kometa.toggles.autofarm = true
 			end
 		end
 	end end)
