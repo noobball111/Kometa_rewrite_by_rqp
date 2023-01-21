@@ -43,7 +43,7 @@ local kometa = {
         return game:GetService("Players").LocalPlayer.Character.Humanoid
     end,
     ["tween"] = function(time, pos) -- tween to position by (time) + (frame)
-		speed = 62 --studs/second
+		speed = 60 --studs/second
 		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		temp_time = distance/speed
@@ -51,7 +51,7 @@ local kometa = {
 		createplatform(temp_time)
 	end,
 	["tweenNoDelay"] = function(time, pos) -- tween to position by (time) + (frame)
-		speed = 62 --studs/second
+		speed = 60 --studs/second
 		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		temp_time = distance/speed
