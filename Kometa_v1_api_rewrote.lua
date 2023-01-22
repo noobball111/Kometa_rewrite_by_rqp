@@ -42,25 +42,23 @@ local kometa = {
     ["humanoid"] = function() 
         return game:GetService("Players").LocalPlayer.Character.Humanoid
     end,
-    ["tween"] = function(time, pos) -- tween to position by (time) + (frame)
-		speed = 60 --studs/second
-		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+	["tween"] = function(time, pos) -- tween to position by (time) + (frame)
+		local speed = 60 --studs/second
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		--distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
-		distance = plr.Position - pos
-		distance = distance
+		local distance = Vector3.new(plr.Position.X, plr.Position.Y, plr.Position.Z) - Vector3.new(pos.X, pos.Y, pos.Z)
 		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
-		temp_time = distance/speed
-  		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y --[[+5]], pos.Z)}):Play()
+		local temp_time = distance/speed
+		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y --[[+5]], pos.Z)}):Play()
 		createplatform(temp_time)
 	end,
 	["tweenNoDelay"] = function(time, pos) -- tween to position by (time) + (frame)
-		speed = 60 --studs/second
-		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local speed = 60 --studs/second
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		--distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
-		distance = plr.Position - pos
-		distance = distance
+		local distance = Vector3.new(plr.Position.X, plr.Position.Y, plr.Position.Z) - Vector3.new(pos.X, pos.Y, pos.Z)
 		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
-		temp_time = distance/speed
+		local temp_time = distance/speed
 		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y --[[+5]], pos.Z)}):Play()
 		createplatform(temp_time)
 	end,
