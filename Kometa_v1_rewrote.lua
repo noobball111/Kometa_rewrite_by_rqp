@@ -986,13 +986,13 @@ function collectplanters()
 		-- print(v[1], v[4], planterToCollect.growth, planterToCollect.growth <= v[4])
 		if planterToCollect.enabled and planterToCollect.growth <= v[4] then
 			--api.teleport(CFrame.new(v[3]))
-			api.tween(3, (CFrame.new(v[3])))
-			--game:GetService("ReplicatedStorage").Events.PlanterModelCollect:FireServer(v[2])
-			for i = 1,3 do
+			api.tweenDelay(3, (CFrame.new(v[3])))
+			game:GetService("ReplicatedStorage").Events.PlanterModelCollect:FireServer(v[2])
+			--[[for i = 1,3 do
 				VirtualPressButton("E")
 				task.wait()
 			end
-			task.wait(1)
+			task.wait(1)]]
 			-- game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = v.." Planter"})
 			for i = 1, 5 do gettoken(CFrame.new(v[3]).Position) end
 			task.wait(1)
