@@ -716,20 +716,20 @@ function makesprinklers()
             end
             api.humanoid().JumpPower = 70
             if Amount == 1 then
-                api.tweenDelay(CFrame.new(FieldSelected.Position))
+                api.tweenDelay(3, CFrame.new(FieldSelected.Position))
                 task.wait(.1)
                 api.humanoid().Jump = true
             elseif Amount ~= 2 then
-                api.tweenDelay(CFrame.new(FieldBounds[Index]))
+                api.tweenDelay(3, CFrame.new(FieldBounds[Index]))
                 task.wait(.1)
                 api.humanoid().Jump = true
             else
                 if Index == 1 then
-                    api.tweenDelay(CFrame.new(FieldBounds[1]))
+                    api.tweenDelay(3, CFrame.new(FieldBounds[1]))
                     task.wait(.1)
                     api.humanoid().Jump = true
                 else
-                    api.tweenDelay(CFrame.new(FieldBounds[3]))
+                    api.tweenDelay(3, CFrame.new(FieldBounds[3]))
                     task.wait(.1)
                     api.humanoid().Jump = true
                 end
