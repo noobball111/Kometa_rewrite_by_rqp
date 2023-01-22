@@ -1338,7 +1338,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.glue then
+		if kometa.dispensesettings.glue and CheckToyCooldown('Glue Dispenser') then
 			api.tween(3, Vector3.new(5.3316144943237305, 85.96747589111328, 490.0305480957031))
 			task.wait(3)
 			game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = "Gumdrops"})
@@ -2451,4 +2451,4 @@ if _G.autoload ~= nil then if isfile("kometa/BSS_".._G.autoload..".json") then k
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.BeePopUp.MutationFrame.MutationLabel.Text = ""
 if table.find(temptable.bestblacklistever, game.Players.LocalPlayer.UserId) then game.Players.LocalPlayer:Kick("ðŸ¤“") end
 
-warn("took "..tostring(time()-time1).."seconds to load")
+warn("took"..tostring(time()-time1).."second to load")
