@@ -20,7 +20,7 @@ function createplatform(Time)
 
 		while (timer < Time) and task.wait(0.1) do
 			timer = timer + 0.1
-			local part = player.Character.LeftFoot
+			local part = player.Character:FindFirstChild("LeftFoot")
 			basepart.Position = Vector3.new(part.Position.X, part.Position.Y - .65, part.Position.Z)
 		end
 		basepart:Destroy()
