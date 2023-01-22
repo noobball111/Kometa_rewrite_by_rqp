@@ -64,7 +64,7 @@ local kometa = {
 	end,
 	["tweenDelay"] = function(time,pos)
 		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-		game:GetService("TweenService"):Create(plr, TweenInfo.new(time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y --[[+5]], pos.Z)}):Play()
+		game:GetService("TweenService"):Create(plr, TweenInfo.new(time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y [[+5]], pos.Z)}):Play()
 		createplatform(time)
 	end,
     ["walkTo"] = function(v3) -- walk to position (not pathfinding)
