@@ -37,9 +37,11 @@ local kometa = {
         return v1/v2
     end,
     ["humanoidrootpart"] = function()
+	game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart")
         return game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
     end,
-    ["humanoid"] = function() 
+    ["humanoid"] = function()
+	game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid")
         return game:GetService("Players").LocalPlayer.Character.Humanoid
     end,
 	["tween"] = function(time, pos) -- tween to position by (time) + (frame)
