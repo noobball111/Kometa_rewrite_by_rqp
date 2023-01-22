@@ -68,7 +68,7 @@ local kometa = {
 		createplatform(time)
 	end,
     ["walkTo"] = function(v3) -- walk to position (not pathfinding)
-       game:GetService("Players").LocalPlayer.Character.Humanoid:MoveTo(v3) 
+       game:GetService("Players").LocalPlayer.Character.Humanoid:MoveTo(Vector3.new(v3.X,v3.Y,v3.Z)) 
     end,
     ["isExist"] = function(obj) -- check for object, if it is exist then returnes true
         if obj ~= nil then
