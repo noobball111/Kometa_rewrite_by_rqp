@@ -545,12 +545,13 @@ function farmsnowflakes(v)
 	if kometa.toggles.farmsnowflakes then
 		temptable.collecting.snowflake = true
 		local SnowflakePosition = v.Position
-		api.teleport(CFrame.new(SnowflakePosition))
-		temptable.float = true
+		--api.teleport(CFrame.new(SnowflakePosition))
+		api.tween(3, CFrame.new(SnowflakePosition))
+		--temptable.float = true
 		repeat
 			task.wait()
 		until not v.Parent or v.CFrame.YVector.Y ~= 1 
-		if temptable.float then temptable.float = false end
+		--if temptable.float then temptable.float = false end
 		task.wait(1)
 		temptable.collecting.snowflake = false
 	end
