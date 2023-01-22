@@ -2180,64 +2180,64 @@ task.spawn(function() while task.wait(.1) do
 			if kometa.toggles.autodonate then
 				game.ReplicatedStorage.Events.WindShrineDonation:InvokeServer(kometa.vars.donatit[1], kometa.vars.donatit[2])
 				if not donotdonatedrop then game.ReplicatedStorage.Events.WindShrineTrigger:FireServer() end
-				disableall()
+				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-Vector3.new(-484, 142, 413)).magnitude < 35 and v.CFrame.YVector.Y == 1 then
 						api.tweenDelay(.5, v.Position)
 					end
 				end
-				enableall()
+				--enableall()
 			end
 			if kometa.toggles.autosamovar then
 				platformm = game:GetService("Workspace").Toys.Samovar.Platform
-				disableall()
+				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						api.tweenDelay(.5, v.Position)
 					end
 				end
-				enableall()
+				--enableall()
 			end
 			if kometa.toggles.autostockings then
 				platformm = game:GetService("Workspace").Toys.Stockings.Platform
-				disableall()
+				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						api.tweenDelay(.5, v.Position)
 					end
 				end
-				enableall()
+				--enableall()
 			end
 			if kometa.toggles.autoonettart then
 				platformm = game:GetService("Workspace").Toys["Onett's Lid Art"].Platform
-				disableall()
+				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						api.tweenDelay(.5, v.Position)
 					end
 				end
-				enableall()
+				--enableall()
 			end
 			if kometa.toggles.autocandles then
 				platformm = game:GetService("Workspace").Toys["Honeyday Candles"].Platform
-				disableall()
+				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						api.tweenDelay(.5, v.Position)
 					end
 				end
-				enableall()
+				--enableall()
 			end
 			if kometa.toggles.autofeast then
 				platformm = game:GetService("Workspace").Toys["Beesmas Feast"].Platform
-				disableall()
+				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						--api.humanoidrootpart().CFrame = v.CFrame
 						api.tweenDelay(.5, v.Position)
 					end
 				end
-				enableall()
+				--enableall()
 			end
 		end
 	end end)
