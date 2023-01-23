@@ -1268,8 +1268,8 @@ function CheckToyCooldown(Toy)
 	return (os.time() - (rtsg().ToyTimes[Toy] or math.huge) + 10 ) > game:GetService("Workspace").Toys[Toy].Cooldown.Value or false
 end
 
-function UseDispensers()
-	if kometa.toggles.honeystorm and CheckToyCooldown('Honeystorm') then
+function UseDispensers()	
+	if kometa.toggles.honeystorm and CheckToyCooldown('Honeystorm') then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Honeystorm'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Honeystorm') 
 		api.tween(3, CFrame.new(ToysFolder['Honeystorm'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Honeystorm")
@@ -1279,7 +1279,7 @@ function UseDispensers()
 		end 
 		task.wait(5)
 	end
-	if kometa.toggles.autospawnsprout and CheckToyCooldown('Sprout Summoner') then
+	if kometa.toggles.autospawnsprout and CheckToyCooldown('Sprout Summoner') then disableall()
 		api.tween(3, CFrame.new(ToysFolder['Sprout Summoner'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Sprout Summoner")
 		for ok = 1,3 do
@@ -1289,7 +1289,7 @@ function UseDispensers()
 		task.wait(5)
 	end
 	if kometa.toggles.autodispense then
-		if kometa.dispensesettings.rj and CheckToyCooldown('Free Royal Jelly Dispenser') then
+		if kometa.dispensesettings.rj and CheckToyCooldown('Free Royal Jelly Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Free Royal Jelly Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Free Royal Jelly Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Free Royal Jelly Dispenser')
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Free Royal Jelly Dispenser")
@@ -1299,7 +1299,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.blub and CheckToyCooldown('Blueberry Dispenser') then
+		if kometa.dispensesettings.blub and CheckToyCooldown('Blueberry Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Blueberry Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Blueberry Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Blueberry Dispenser') 
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Blueberry Dispenser")
@@ -1309,7 +1309,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.straw and CheckToyCooldown('Strawberry Dispenser') then
+		if kometa.dispensesettings.straw and CheckToyCooldown('Strawberry Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Strawberry Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Strawberry Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Strawberry Dispenser') 
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Strawberry Dispenser")
@@ -1319,7 +1319,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.treat and CheckToyCooldown('Treat Dispenser') then
+		if kometa.dispensesettings.treat and CheckToyCooldown('Treat Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Treat Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Treat Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Treat Dispenser') 
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Treat Dispenser")
@@ -1329,7 +1329,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.coconut and CheckToyCooldown('Coconut Dispenser') then
+		if kometa.dispensesettings.coconut and CheckToyCooldown('Coconut Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Coconut Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Coconut Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Coconut Dispenser') 
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Coconut Dispenser")
@@ -1339,7 +1339,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.glue and CheckToyCooldown('Glue Dispenser') then
+		if kometa.dispensesettings.glue and CheckToyCooldown('Glue Dispenser') then disableall()
 			api.tween(3, Vector3.new(5.3316144943237305, 85.96747589111328, 490.0305480957031))
 			task.wait(3)
 			game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = "Gumdrops"})
@@ -1356,7 +1356,7 @@ function UseDispensers()
 		end
 	end
 	if kometa.toggles.autoboosters then
-		if kometa.dispensesettings.white and CheckToyCooldown('Field Booster') then
+		if kometa.dispensesettings.white and CheckToyCooldown('Field Booster') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Field Booster') 
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Field Booster")
@@ -1366,7 +1366,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.red and CheckToyCooldown('Red Field Booster') then
+		if kometa.dispensesettings.red and CheckToyCooldown('Red Field Booster') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Red Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Red Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Red Field Booster') 
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Red Field Booster")
@@ -1376,7 +1376,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 		end
-		if kometa.dispensesettings.blue and CheckToyCooldown('Blue Field Booster') then
+		if kometa.dispensesettings.blue and CheckToyCooldown('Blue Field Booster') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Blue Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 			-- repeat api.teleport(CFrame.new(ToysFolder['Blue Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Blue Field Booster') 
 			--game.ReplicatedStorage.Events.ToyEvent:FireServer("Blue Field Booster")
@@ -1387,7 +1387,7 @@ function UseDispensers()
 		end
 		task.wait(5)
 	end
-	if kometa.toggles.clock and CheckToyCooldown('Wealth Clock') then
+	if kometa.toggles.clock and CheckToyCooldown('Wealth Clock') then disableall()
 		api.tween(3, CFrame.new(ToysFolder['Wealth Clock'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		-- repeat api.teleport(CFrame.new(ToysFolder['Wealth Clock'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Wealth Clock') 
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Wealth Clock")
@@ -1417,7 +1417,7 @@ function UseDispensers()
 		end 
 		task.wait(5)
 	end
-	if kometa.toggles.autosamovar and CheckToyCooldown("Samovar") and game:GetService("Workspace").Toys['Samovar']:FindFirstChild("ModelAfter") then
+	if kometa.toggles.autosamovar and CheckToyCooldown("Samovar") and game:GetService("Workspace").Toys['Samovar']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Samovar'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Samovar')
 		api.tween(3, CFrame.new(ToysFolder['Samovar'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Samovar")
@@ -1435,7 +1435,7 @@ function UseDispensers()
 		end 
 		task.wait(5)
 	end
-	if kometa.toggles.autostockings and CheckToyCooldown("Stockings") and game:GetService("Workspace").Toys['Stockings']:FindFirstChild("ModelAfter") then
+	if kometa.toggles.autostockings and CheckToyCooldown("Stockings") and game:GetService("Workspace").Toys['Stockings']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Stockings'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Stockings')
 		api.tween(3, CFrame.new(ToysFolder['Stockings'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Stockings")
@@ -1445,7 +1445,7 @@ function UseDispensers()
 		end 
 		task.wait(5)
 	end
-	if kometa.toggles.autoonettart and CheckToyCooldown("Onett's Lid Art") and game:GetService("Workspace").Toys["Onett's Lid Art"]:FindFirstChild("ModelAfter") then
+	if kometa.toggles.autoonettart and CheckToyCooldown("Onett's Lid Art") and game:GetService("Workspace").Toys["Onett's Lid Art"]:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder["Onett's Lid Art"].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown("Onett's Lid Art")
 		api.tween(3, CFrame.new(ToysFolder["Onett's Lid Art"].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Onett's Lid Art")
@@ -1455,7 +1455,7 @@ function UseDispensers()
 		end 
 		task.wait(5)
 	end
-	if kometa.toggles.autocandles and CheckToyCooldown("Honeyday Candles") and game:GetService("Workspace").Toys['Honeyday Candles']:FindFirstChild("ModelAfter") then
+	if kometa.toggles.autocandles and CheckToyCooldown("Honeyday Candles") and game:GetService("Workspace").Toys['Honeyday Candles']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Honeyday Candles'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Honeyday Candles')
 		api.tween(3, CFrame.new(ToysFolder['Honeyday Candles'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Honeyday Candles")
@@ -1465,7 +1465,7 @@ function UseDispensers()
 		end 
 		task.wait(5)
 	end
-	if kometa.toggles.autofeast and CheckToyCooldown('Beesmas Feast') and game:GetService("Workspace").Toys['Beesmas Feast']:FindFirstChild("ModelAfter") then
+	if kometa.toggles.autofeast and CheckToyCooldown('Beesmas Feast') and game:GetService("Workspace").Toys['Beesmas Feast']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Beesmas Feast'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Beesmas Feast')
 		api.tween(3, CFrame.new(ToysFolder['Beesmas Feast'].Platform.CFrame.Position) * CFrame.new(0,3,0))
 		--game.ReplicatedStorage.Events.ToyEvent:FireServer("Beesmas Feast")
@@ -1475,6 +1475,7 @@ function UseDispensers()
 		end
 		task.wait(5)
 	end
+enableall()
 end
 
 local ui = library.new(true, "kometa â˜„ï¸ | v"..temptable.version)
@@ -1859,9 +1860,9 @@ end)
 
 task.spawn(function() while task.wait(5) do
 	if not temptable.converting then
-		disableall()
+		--disableall()
 		UseDispensers()
-		enableall()
+		--enableall()
 	end
 	end end)
 
