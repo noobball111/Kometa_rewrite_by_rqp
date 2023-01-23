@@ -1937,7 +1937,7 @@ task.spawn(function() while task.wait() do
 				fieldposition = fieldselected.Position
 				if temptable.sprouts.detected and temptable.sprouts.coords and kometa.toggles.farmsprouts then
 					fieldposition = temptable.sprouts.coords.Position
-					fieldpos = temptable.sprouts.coords + CFrame.new(0,5,0)
+					fieldpos = temptable.sprouts.coords + Vector3.new(0, 5, 0)
 				end
 				if kometa.toggles.farmpuffshrooms and game.Workspace.Happenings.Puffshrooms:FindFirstChildOfClass("Model") then 
 					if api.partwithnamepart("Mythic", game.Workspace.Happenings.Puffshrooms) then
