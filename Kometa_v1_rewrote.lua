@@ -773,7 +773,7 @@ function killmobs()
 					monsterpart = v.Territory.Value
 				end
 				-- api.humanoidrootpart().CFrame = monsterpart.CFrame
-				api.tween(3, monsterpart.CFrame)
+				api.tween(3, monsterpart.CFrame + CFrame.new(0, 5, 0)
 				repeat avoidmob() task.wait(1) until v:FindFirstChild("TimerLabel", true).Visible or api.humanoid().Health == 0
 				-- repeat api.humanoidrootpart().CFrame = monsterpart.CFrame avoidmob() task.wait(1) until v:FindFirstChild("TimerLabel", true).Visible or api.humanoid().Health == 0
 				for i = 1, 4 do gettoken(monsterpart.Position) end
