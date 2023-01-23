@@ -1,3 +1,4 @@
+time1 = time()
 local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/noobball111/Kometa_rewrite_by_rqp/main/Kometa_v1_api_rewrote.lua"))()
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/ui/finity.lua"))()
 local bssapi = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/api/bssapi.lua"))()
