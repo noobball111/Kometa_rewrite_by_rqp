@@ -1,4 +1,8 @@
-time1 = time()
+function ok(time, pos)
+	print(pos)
+end
+
+ok(3, CFrame.new(10,10,10) + Vector3.new(0, 5, 0))time1 = time()
 local api = loadstring(game:HttpGet("https://raw.githubusercontent.com/noobball111/Kometa_rewrite_by_rqp/main/Kometa_v1_api_rewrote.lua"))()
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/ui/finity.lua"))()
 local bssapi = loadstring(game:HttpGet("https://raw.githubusercontent.com/kometa-anon/kometa/main/api/bssapi.lua"))()
@@ -689,76 +693,76 @@ function getlinktoken(v3)
 end
 
 function makesprinklers()
-    if (game:GetService("Workspace").FlowerZones[kometa.vars.field].Position - api.humanoidrootpart().Position).magnitude < temptable.magnitude then
-        local Sprinkler = rtsg().EquippedSprinkler
-        local Amount = 1
-        if Sprinkler == "Basic Sprinkler" or Sprinkler == "The Supreme Saturator" then
-            Amount = 1
-        elseif Sprinkler == "Silver Soakers" then
-            Amount = 2
-        elseif Sprinkler == "Golden Gushers" then
-            Amount = 3
-        elseif Sprinkler == "Diamond Drenchers" then
-            Amount = 4
-        end
-        local FieldSelected = game:GetService("Workspace").FlowerZones[kometa.vars.field]
-        local FieldEdge1 = FieldSelected.Position + Vector3.new((FieldSelected.Size.X / 2) - 24, 0, (FieldSelected.Size.Z / 2) - 24)
-        local FieldEdge2 = FieldSelected.Position - Vector3.new((FieldSelected.Size.X / 2) - 24, 0, (FieldSelected.Size.Z / 2) - 24)
-        local FieldBounds = {
-            [1] = Vector3.new(FieldEdge1.X - FieldEdge1.X % 0.000000000000001, FieldSelected.Position.Y, FieldSelected.Position.Z),
-            [2] = Vector3.new(FieldSelected.Position.X, FieldSelected.Position.Y, FieldEdge1.Z - FieldEdge1.Z % 0.000000000000001),
-            [3] = Vector3.new(FieldEdge2.X - FieldEdge2.X % 0.000000000000001, FieldSelected.Position.Y, FieldSelected.Position.Z),
-            [4] = Vector3.new(FieldSelected.Position.X, FieldSelected.Position.Y, FieldEdge2.Z - FieldEdge2.Z % 0.000000000000001),
-        }
-        local JumpPower = api.humanoid().JumpPower
-        for Index = 1, Amount do
-            if not kometa.toggles.autofarm then
-                break
-            end
-            api.humanoid().JumpPower = 70
-            if Amount == 1 then
-                api.tweenDelay(3, CFrame.new(FieldSelected.Position))
-                task.wait(.1)
-                api.humanoid().Jump = true
-            elseif Amount ~= 2 then
-                api.tweenDelay(3, CFrame.new(FieldBounds[Index]))
-                task.wait(.1)
-                api.humanoid().Jump = true
-            else
-                if Index == 1 then
-                    api.tweenDelay(3, CFrame.new(FieldBounds[1]))
-                    task.wait(.1)
-                    api.humanoid().Jump = true
-                else
-                    api.tweenDelay(3, CFrame.new(FieldBounds[3]))
-                    task.wait(.1)
-                    api.humanoid().Jump = true
-                end
-            end
-            task.wait(0.2)
-            game.ReplicatedStorage.Events.PlayerActivesCommand:FireServer({["Name"] = "Sprinkler Builder"})
-            api.humanoid().JumpPower = JumpPower
-            task.wait(1.3)
-        end
-    else
-        sprinkler = rtsg().EquippedSprinkler
-        e = 1
-        if sprinkler == "Basic Sprinkler" or sprinkler == "The Supreme Saturator" then
-            e = 1
-        elseif sprinkler == "Silver Soakers" then
-            e = 2
-        elseif sprinkler == "Golden Gushers" then
-            e = 3
-        elseif sprinkler == "Diamond Drenchers" then
-            e = 4
-        end
-        for i = 1, e do
-            k = api.humanoid().JumpPower
-            if e ~= 1 then api.humanoid().JumpPower = 70 api.humanoid().Jump = true task.wait(.2) end
-            game.ReplicatedStorage.Events.PlayerActivesCommand:FireServer({["Name"] = "Sprinkler Builder"})
-            if e ~= 1 then api.humanoid().JumpPower = k task.wait(1) end
-        end
-    end
+	if (game:GetService("Workspace").FlowerZones[kometa.vars.field].Position - api.humanoidrootpart().Position).magnitude < temptable.magnitude then
+		local Sprinkler = rtsg().EquippedSprinkler
+		local Amount = 1
+		if Sprinkler == "Basic Sprinkler" or Sprinkler == "The Supreme Saturator" then
+			Amount = 1
+		elseif Sprinkler == "Silver Soakers" then
+			Amount = 2
+		elseif Sprinkler == "Golden Gushers" then
+			Amount = 3
+		elseif Sprinkler == "Diamond Drenchers" then
+			Amount = 4
+		end
+		local FieldSelected = game:GetService("Workspace").FlowerZones[kometa.vars.field]
+		local FieldEdge1 = FieldSelected.Position + Vector3.new((FieldSelected.Size.X / 2) - 24, 0, (FieldSelected.Size.Z / 2) - 24)
+		local FieldEdge2 = FieldSelected.Position - Vector3.new((FieldSelected.Size.X / 2) - 24, 0, (FieldSelected.Size.Z / 2) - 24)
+		local FieldBounds = {
+			[1] = Vector3.new(FieldEdge1.X - FieldEdge1.X % 0.000000000000001, FieldSelected.Position.Y, FieldSelected.Position.Z),
+			[2] = Vector3.new(FieldSelected.Position.X, FieldSelected.Position.Y, FieldEdge1.Z - FieldEdge1.Z % 0.000000000000001),
+			[3] = Vector3.new(FieldEdge2.X - FieldEdge2.X % 0.000000000000001, FieldSelected.Position.Y, FieldSelected.Position.Z),
+			[4] = Vector3.new(FieldSelected.Position.X, FieldSelected.Position.Y, FieldEdge2.Z - FieldEdge2.Z % 0.000000000000001),
+		}
+		local JumpPower = api.humanoid().JumpPower
+		for Index = 1, Amount do
+			if not kometa.toggles.autofarm then
+				break
+			end
+			api.humanoid().JumpPower = 70
+			if Amount == 1 then
+				api.tweenDelay(3, CFrame.new(FieldSelected.Position))
+				task.wait(.1)
+				api.humanoid().Jump = true
+			elseif Amount ~= 2 then
+				api.tweenDelay(3, CFrame.new(FieldBounds[Index]))
+				task.wait(.1)
+				api.humanoid().Jump = true
+			else
+				if Index == 1 then
+					api.tweenDelay(3, CFrame.new(FieldBounds[1]))
+					task.wait(.1)
+					api.humanoid().Jump = true
+				else
+					api.tweenDelay(3, CFrame.new(FieldBounds[3]))
+					task.wait(.1)
+					api.humanoid().Jump = true
+				end
+			end
+			task.wait(0.2)
+			game.ReplicatedStorage.Events.PlayerActivesCommand:FireServer({["Name"] = "Sprinkler Builder"})
+			api.humanoid().JumpPower = JumpPower
+			task.wait(1.3)
+		end
+	else
+		sprinkler = rtsg().EquippedSprinkler
+		e = 1
+		if sprinkler == "Basic Sprinkler" or sprinkler == "The Supreme Saturator" then
+			e = 1
+		elseif sprinkler == "Silver Soakers" then
+			e = 2
+		elseif sprinkler == "Golden Gushers" then
+			e = 3
+		elseif sprinkler == "Diamond Drenchers" then
+			e = 4
+		end
+		for i = 1, e do
+			k = api.humanoid().JumpPower
+			if e ~= 1 then api.humanoid().JumpPower = 70 api.humanoid().Jump = true task.wait(.2) end
+			game.ReplicatedStorage.Events.PlayerActivesCommand:FireServer({["Name"] = "Sprinkler Builder"})
+			if e ~= 1 then api.humanoid().JumpPower = k task.wait(1) end
+		end
+	end
 end
 
 function killmobs()
@@ -773,7 +777,7 @@ function killmobs()
 					monsterpart = v.Territory.Value
 				end
 				-- api.humanoidrootpart().CFrame = monsterpart.CFrame
-				api.tween(3, Vector3.new(monsterpart.CFrame + Vector3.new(0, 5, 0)))
+				api.tween(3, monsterpart.CFrame + Vector3.new(0, 5, 0))
 				repeat avoidmob() task.wait(1) until v:FindFirstChild("TimerLabel", true).Visible or api.humanoid().Health == 0
 				-- repeat api.humanoidrootpart().CFrame = monsterpart.CFrame avoidmob() task.wait(1) until v:FindFirstChild("TimerLabel", true).Visible or api.humanoid().Health == 0
 				for i = 1, 4 do gettoken(monsterpart.Position) end
@@ -1475,7 +1479,7 @@ function UseDispensers()
 		end
 		task.wait(5)
 	end
-enableall()
+	enableall()
 end
 
 local ui = library.new(true, "kometa â˜„ï¸ | v"..temptable.version)
@@ -1859,11 +1863,11 @@ game.Workspace.Particles.Snowflakes.ChildAdded:Connect(function(Object)
 end)
 
 task.spawn(function() while task.wait(5) do
-	if not temptable.converting then
-		--disableall()
-		UseDispensers()
-		--enableall()
-	end
+		if temptable.converting == false then
+			--disableall()
+			UseDispensers()
+			--enableall()
+		end
 	end end)
 
 task.spawn(function() while task.wait(1) do
@@ -2457,4 +2461,4 @@ if _G.autoload ~= nil then if isfile("kometa/BSS_".._G.autoload..".json") then k
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.BeePopUp.MutationFrame.MutationLabel.Text = ""
 if table.find(temptable.bestblacklistever, game.Players.LocalPlayer.UserId) then game.Players.LocalPlayer:Kick("ðŸ¤“") end
 
-warn("took"..tostring(time()-time1).."second to load")
+warn("took "..tostring(time()-time1).."second to load")
