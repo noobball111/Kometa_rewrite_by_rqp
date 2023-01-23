@@ -1277,7 +1277,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.autospawnsprout and CheckToyCooldown('Sprout Summoner') then disableall()
 		api.tween(3, CFrame.new(ToysFolder['Sprout Summoner'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1286,7 +1286,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.autodispense then
 		if kometa.dispensesettings.rj and CheckToyCooldown('Free Royal Jelly Dispenser') then disableall()
@@ -1297,7 +1297,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 		end
 		if kometa.dispensesettings.blub and CheckToyCooldown('Blueberry Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Blueberry Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1307,7 +1307,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 		end
 		if kometa.dispensesettings.straw and CheckToyCooldown('Strawberry Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Strawberry Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1317,7 +1317,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 		end
 		if kometa.dispensesettings.treat and CheckToyCooldown('Treat Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Treat Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1327,7 +1327,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 		end
 		if kometa.dispensesettings.coconut and CheckToyCooldown('Coconut Dispenser') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Coconut Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1337,7 +1337,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 		end
 		if kometa.dispensesettings.glue and CheckToyCooldown('Glue Dispenser') then disableall()
 			api.tween(3, Vector3.new(5.3316144943237305, 85.96747589111328, 490.0305480957031))
@@ -1351,7 +1351,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 			game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
 		end
 	end
@@ -1364,7 +1364,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 		end
 		if kometa.dispensesettings.red and CheckToyCooldown('Red Field Booster') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Red Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1374,7 +1374,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			task.wait(5)
+			--task.wait(5)
 		end
 		if kometa.dispensesettings.blue and CheckToyCooldown('Blue Field Booster') then disableall()
 			api.tween(3, CFrame.new(ToysFolder['Blue Field Booster'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1385,7 +1385,7 @@ function UseDispensers()
 				task.wait()
 			end 
 		end
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.clock and CheckToyCooldown('Wealth Clock') then disableall()
 		api.tween(3, CFrame.new(ToysFolder['Wealth Clock'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1395,7 +1395,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.freeantpass and CheckToyCooldown('Free Ant Pass Dispenser') and rtsg().Eggs.AntPass < 10 then
 		api.tween(3, CFrame.new(ToysFolder['Free Ant Pass Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1405,7 +1405,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.freerobopass and CheckToyCooldown('Free Robo Pass Dispenser') and rtsg().Eggs.RoboPass < 10 then
 		api.tween(3, CFrame.new(ToysFolder['Free Robo Pass Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1415,7 +1415,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.autosamovar and CheckToyCooldown("Samovar") and game:GetService("Workspace").Toys['Samovar']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Samovar'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Samovar')
@@ -1433,7 +1433,7 @@ function UseDispensers()
 				repeat task.wait() api.tweenDelay(.5, v.Position) until not v or not v.Parent
 			end
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.autostockings and CheckToyCooldown("Stockings") and game:GetService("Workspace").Toys['Stockings']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Stockings'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Stockings')
@@ -1443,7 +1443,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.autoonettart and CheckToyCooldown("Onett's Lid Art") and game:GetService("Workspace").Toys["Onett's Lid Art"]:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder["Onett's Lid Art"].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown("Onett's Lid Art")
@@ -1453,7 +1453,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.autocandles and CheckToyCooldown("Honeyday Candles") and game:GetService("Workspace").Toys['Honeyday Candles']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Honeyday Candles'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Honeyday Candles')
@@ -1463,7 +1463,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end 
-		task.wait(5)
+		--task.wait(5)
 	end
 	if kometa.toggles.autofeast and CheckToyCooldown('Beesmas Feast') and game:GetService("Workspace").Toys['Beesmas Feast']:FindFirstChild("ModelAfter") then disableall()
 		-- repeat api.teleport(CFrame.new(ToysFolder['Beesmas Feast'].Platform.CFrame.Position) * CFrame.new(0,3,0)) task.wait() VirtualPressButton('E') until not CheckToyCooldown('Beesmas Feast')
@@ -1473,7 +1473,7 @@ function UseDispensers()
 			VirtualPressButton('E')
 			task.wait()
 		end
-		task.wait(5)
+		--task.wait(5)
 	end
 	enableall()
 end
