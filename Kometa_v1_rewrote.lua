@@ -1858,7 +1858,11 @@ game.Workspace.Particles.Snowflakes.ChildAdded:Connect(function(Object)
 end)
 
 task.spawn(function() while task.wait(5) do
+	if not temptable.converting then
+		disableall()
 		UseDispensers()
+		enableall()
+	end
 	end end)
 
 task.spawn(function() while task.wait(1) do
