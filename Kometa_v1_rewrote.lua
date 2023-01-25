@@ -2255,7 +2255,7 @@ task.spawn(function() while task.wait(1) do
 
 game:GetService('RunService').Heartbeat:connect(function() 
 	if kometa.toggles.autoquest then firesignal(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.NPC.ButtonOverlay.MouseButton1Click) end
-	if kometa.toggles.loopspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.walkspeed end
+	if kometa.toggles.loopspeed then game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = kometa.vars.walkspeed end
 	if kometa.toggles.loopjump then game.Players.LocalPlayer.Character.Humanoid.JumpPower = kometa.vars.jumppower end
 end)
 
