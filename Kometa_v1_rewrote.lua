@@ -764,7 +764,7 @@ end
 function killmobs()
 	for i,v in pairs(game:GetService("Workspace").MonsterSpawners:GetChildren()) do
 		if v:FindFirstChild("Territory") then
-			if v.Name ~= "Commando Chick" and v.Name ~= "CoconutCrab" and v.Name ~= "StumpSnail" and v.Name ~= "TunnelBear" and v.Name ~= "King Beetle Cave" and not v.Name:match("CaveMonster") and not v:FindFirstChild("TimerLabel", true).Visible then
+			if v.Name ~= "Commando Chick" and v.Name ~= "CoconutCrab" and v.Name ~= "StumpSnail" and v.Name ~= "TunnelBear" --[[and v.Name ~= "King Beetle Cave"]] and not v.Name:match("CaveMonster") and not v:FindFirstChild("TimerLabel", true).Visible then
 				if v.Name:match("Werewolf") then
 					monsterpart = game:GetService("Workspace").Territories.WerewolfPlateau.w
 				elseif v.Name:match("Mushroom") then
@@ -773,7 +773,7 @@ function killmobs()
 					monsterpart = v.Territory.Value
 				end
 				-- api.humanoidrootpart().CFrame = monsterpart.CFrame
-				api.tween(3, monsterpart.CFrame + Vector3.new(0, 5, 0))
+				api.tween(3, monsterpart.CFrame + Vector3.new(0, 15, 0))
 				repeat avoidmob() task.wait(1) until v:FindFirstChild("TimerLabel", true).Visible or api.humanoid().Health == 0
 				-- repeat api.humanoidrootpart().CFrame = monsterpart.CFrame avoidmob() task.wait(1) until v:FindFirstChild("TimerLabel", true).Visible or api.humanoid().Health == 0
 				for i = 1, 4 do gettoken(monsterpart.Position) end
