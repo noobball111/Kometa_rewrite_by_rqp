@@ -1341,7 +1341,7 @@ function UseDispensers()
 		end
 		if kometa.dispensesettings.glue and CheckToyCooldown('Glue Dispenser') then disableall()
 			api.tween(3, Vector3.new(5.3316144943237305, 85.96747589111328, 490.0305480957031))
-			task.wait(3)
+			task.wait(5)
 			game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"] = "Gumdrops"})
 			task.wait(2)
 			api.tween(3, CFrame.new(ToysFolder['Glue Dispenser'].Platform.CFrame.Position) * CFrame.new(0,3,0))
@@ -1351,7 +1351,7 @@ function UseDispensers()
 				VirtualPressButton('E')
 				task.wait()
 			end 
-			--task.wait(5)
+			task.wait(5)
 			game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
 		end
 	end
