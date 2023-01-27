@@ -777,7 +777,7 @@ function killmobs()
 				repeat 
 					avoidmob() 
 					task.wait(1.2) 
-					if api.distance(api.humanoidrootpart.Position, monsterpart.CFrame) ~= 15 then
+					if api.distance(api.humanoidrootpart().Position, monsterpart.CFrame) ~= 15 then
 						api.tween(3, monsterpart.CFrame)
 					end
 				until v:FindFirstChild("TimerLabel", true).Visible or api.humanoid().Health == 0
