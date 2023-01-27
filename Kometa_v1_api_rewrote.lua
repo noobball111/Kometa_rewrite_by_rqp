@@ -10,7 +10,9 @@
 ]]
 
 function createplatform(Time)
-	if not game.Workspace.Terrain:FindFirstChild("Part") then
+	if game.Workspace.Terrain:FindFirstChild("Part") then
+		game.Workspace.Terrain:FindFirstChild("Part"):Destroy()
+	else
 		local timer = 0
 		local player = game:GetService("Players").LocalPlayer
 		local basepart = Instance.new("Part", game.Workspace.Terrain)
@@ -18,8 +20,8 @@ function createplatform(Time)
 		basepart.Anchored = true
 		basepart.Size = Vector3.new(10, 1, 10)
 
-		while (timer < Time) and task.wait(0.1) do
-			timer = timer + 0.1
+		while (timer < Time) and task.wait(00.1) do
+			timer = timer + 00.1
 			local part = player.Character:WaitForChild("LeftFoot")
 			basepart.Position = Vector3.new(part.Position.X, part.Position.Y - .65, part.Position.Z)
 		end
@@ -50,24 +52,40 @@ local kometa = {
         return game:GetService("Players").LocalPlayer.Character.Humanoid
     end,
 	["tween"] = function(time, pos) -- tween to position by (time) + (frame)
+		if game.Workspace.Terrain:FindFirstChild("Tween") then repeat task.wait() until not game.Workspace.Terrain:FindFirstChild("Tween") end
 		local speed = 60 --studs/second
 		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		--distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		local distance = Vector3.new(plr.Position.X, plr.Position.Y, plr.Position.Z) - Vector3.new(pos.X, pos.Y, pos.Z)
 		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
 		local temp_time = distance/speed
-		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y +5, pos.Z)}):Play()
+		local tween = game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y +5, pos.Z)})
+		tween.Parent = game.Workspace.Terrain
+		tween:Play()
 		createplatform(temp_time)
+		tween:Destroy()
 	end,
 	["tweenNoDelay"] = function(time, pos) -- tween to position by (time) + (frame)
-		local speed = 60 --studs/second
+		--[[local speed = 60 --studs/second
 		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		--distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
 		local distance = Vector3.new(plr.Position.X, plr.Position.Y, plr.Position.Z) - Vector3.new(pos.X, pos.Y, pos.Z)
 		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
 		local temp_time = distance/speed
 		game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y +5, pos.Z)}):Play()
+		createplatform(temp_time)]]
+		if game.Workspace.Terrain:FindFirstChild("Tween") then repeat task.wait() until not game.Workspace.Terrain:FindFirstChild("Tween") end
+		local speed = 60 --studs/second
+		local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+		--distance = math.abs((plr.Position - Vector3.new(pos)).Magnitude)
+		local distance = Vector3.new(plr.Position.X, plr.Position.Y, plr.Position.Z) - Vector3.new(pos.X, pos.Y, pos.Z)
+		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
+		local temp_time = distance/speed
+		local tween = game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y +5, pos.Z)})
+		tween.Parent = game.Workspace.Terrain
+		tween:Play()
 		createplatform(temp_time)
+		tween:Destroy()
 	end,
 	["tweenDelay"] = function(time,pos)
 		plr = game.Players.LocalPlayer.Character.HumanoidRootPart
