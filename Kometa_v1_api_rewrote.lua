@@ -30,6 +30,11 @@ end
 local ver = 1
 
 local kometa = {
+    ["distance"] = function(pos1, pos2)
+	local distance = Vector3.new(pos1.Position.X, pos1.Position.Y, pos1.Position.Z) - Vector3.new(pos2.X, pos2.Y, pos2.Z)
+	distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
+	return(distance)
+    end,
     ["log"] = function(text) -- just print() who tf will use this
         print(text)
     end,
