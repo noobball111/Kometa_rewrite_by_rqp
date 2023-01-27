@@ -588,7 +588,7 @@ function farmcombattokens(v, pos, type)
 					api.walkTo(v.Position)
 				until not v.Parent or v.CFrame.YVector.Y ~= 1 or not v
 				--api.teleport(pos)
-				--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(0.5, pos)
+				--[[api.tweenDelay]] api.tween(0.5, pos)
 			end
 		end
 	elseif type == 'snail' then
@@ -598,7 +598,7 @@ function farmcombattokens(v, pos, type)
 					task.wait()
 					api.walkTo(v.Position)
 				until not v.Parent or v.CFrame.YVector.Y ~= 1 or not v
-				--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(0.5, pos)
+				--[[api.tweenDelay]] api.tween(0.5, pos)
 			end
 		end
 	elseif type == 'mondo' then
@@ -609,7 +609,7 @@ function farmcombattokens(v, pos, type)
 					task.wait()
 					--[[api.tweenNoDelay]] api.tween(0.5, v.CFrame)
 				until not v.Parent or v.CFrame.YVector.Y ~= 1 or not v
-				--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(0.5, pos)
+				--[[api.tweenDelay]] api.tween(0.5, pos)
 			end
 		end
 	end
@@ -717,20 +717,20 @@ function makesprinklers()
 			end
 			api.humanoid().JumpPower = 70
 			if Amount == 1 then
-				--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(3, CFrame.new(FieldSelected.Position))
+				--[[api.tweenDelay]] api.tween(3, CFrame.new(FieldSelected.Position))
 				task.wait(.1)
 				api.humanoid().Jump = true
 			elseif Amount ~= 2 then
-				--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(3, CFrame.new(FieldBounds[Index]))
+				--[[api.tweenDelay]] api.tween(3, CFrame.new(FieldBounds[Index]))
 				task.wait(.1)
 				api.humanoid().Jump = true
 			else
 				if Index == 1 then
-					--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(3, CFrame.new(FieldBounds[1]))
+					--[[api.tweenDelay]] api.tween(3, CFrame.new(FieldBounds[1]))
 					task.wait(.1)
 					api.humanoid().Jump = true
 				else
-					--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(3, CFrame.new(FieldBounds[3]))
+					--[[api.tweenDelay]] api.tween(3, CFrame.new(FieldBounds[3]))
 					task.wait(.1)
 					api.humanoid().Jump = true
 				end
@@ -1436,7 +1436,7 @@ function UseDispensers()
 		for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 			if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 				--repeat task.wait() api.humanoidrootpart().CFrame = CFrame.new(v.CFrame.Position) until not v or not v.Parent
-				repeat task.wait() --[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(.5, v.Position) until not v or not v.Parent
+				repeat task.wait() --[[api.tweenDelay]] api.tween(.5, v.Position) until not v or not v.Parent
 			end
 		end 
 		--task.wait(5)
@@ -2163,7 +2163,7 @@ task.spawn(function() while task.wait(.1) do
 				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-Vector3.new(-484, 142, 413)).magnitude < 35 and v.CFrame.YVector.Y == 1 then
-						--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(.5, v.Position)
+						--[[api.tweenDelay]] api.tween(.5, v.Position)
 					end
 				end
 				--enableall()
@@ -2173,7 +2173,7 @@ task.spawn(function() while task.wait(.1) do
 				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(.5, v.Position)
+						--[[api.tweenDelay]] api.tween(.5, v.Position)
 					end
 				end
 				--enableall()
@@ -2183,7 +2183,7 @@ task.spawn(function() while task.wait(.1) do
 				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(.5, v.Position)
+						--[[api.tweenDelay]] api.tween(.5, v.Position)
 					end
 				end
 				--enableall()
@@ -2193,7 +2193,7 @@ task.spawn(function() while task.wait(.1) do
 				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(.5, v.Position)
+						--[[api.tweenDelay]] api.tween(.5, v.Position)
 					end
 				end
 				--enableall()
@@ -2203,7 +2203,7 @@ task.spawn(function() while task.wait(.1) do
 				--disableall()
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
-						--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(.5, v.Position)
+						--[[api.tweenDelay]] api.tween(.5, v.Position)
 					end
 				end
 				--enableall()
@@ -2214,7 +2214,7 @@ task.spawn(function() while task.wait(.1) do
 				for i,v in pairs(game.Workspace.Collectibles:GetChildren()) do
 					if (v.Position-platformm.Position).magnitude < 25 and v.CFrame.YVector.Y == 1 then
 						--api.humanoidrootpart().CFrame = v.CFrame
-						--[[--[[--[[--[[--[[--[[api.tweenDelay]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween]] api.tween(.5, v.Position)
+						--[[api.tweenDelay]] api.tween(.5, v.Position)
 					end
 				end
 				--enableall()
