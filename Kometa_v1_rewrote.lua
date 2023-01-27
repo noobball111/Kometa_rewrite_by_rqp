@@ -607,7 +607,7 @@ function farmcombattokens(v, pos, type)
 			if (v.Position - pos.Position).Magnitude < 25 then
 				repeat
 					task.wait()
-					api.tweenNoDelay(0.5, v.CFrame)
+					--[[api.tweenNoDelay]] api.tween(0.5, v.CFrame)
 				until not v.Parent or v.CFrame.YVector.Y ~= 1 or not v
 				api.tweenDelay(0.5, pos)
 			end
@@ -1981,7 +1981,7 @@ task.spawn(function() while task.wait() do
 									disableall()
 									game:GetService("Workspace").Map.Ground.HighBlock.CanCollide = false 
 									temptable.MondoPosition = game.Workspace.Monsters["Mondo Chick (Lvl 8)"].Head.Position
-									api.tweenNoDelay(0.1, CFrame.new(temptable.MondoPosition.x, temptable.MondoPosition.y - 55, temptable.MondoPosition.z))
+									--[[api.tweenNoDelay]] api.tween(0.1, CFrame.new(temptable.MondoPosition.x, temptable.MondoPosition.y - 55, temptable.MondoPosition.z))
 									task.wait(1)
 									temptable.float = true
 								end
