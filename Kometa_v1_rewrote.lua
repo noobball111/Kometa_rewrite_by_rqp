@@ -2345,7 +2345,7 @@ for _,v in next, game.Workspace.Collectibles:GetChildren() do
 end 
 
 task.spawn(function() while task.wait() do
-		pos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		pos = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position
 		task.wait(0.00001)
 		currentSpeed = (pos-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude
 		if currentSpeed > 0 then
