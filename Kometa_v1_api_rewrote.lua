@@ -59,7 +59,7 @@ local kometa = {
 		local distance = Vector3.new(plr.Position.X, plr.Position.Y, plr.Position.Z) - Vector3.new(pos.X, pos.Y, pos.Z)
 		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
 		local temp_time = distance/speed
-		local tween = game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y +5, pos.Z)})
+		local tween = game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y, pos.Z)})
 		tween.Parent = game.Workspace.Terrain
 		tween:Play()
 		createplatform(temp_time)
@@ -81,7 +81,7 @@ local kometa = {
 		local distance = Vector3.new(plr.Position.X, plr.Position.Y, plr.Position.Z) - Vector3.new(pos.X, pos.Y, pos.Z)
 		distance = math.sqrt((distance.X^2)+(distance.Y^2)+(distance.Z^2))
 		local temp_time = distance/speed
-		local tween = game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y +5, pos.Z)})
+		local tween = game:GetService("TweenService"):Create(plr, TweenInfo.new(temp_time, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos.X, pos.Y, pos.Z)})
 		tween.Parent = game.Workspace.Terrain
 		tween:Play()
 		createplatform(temp_time)
