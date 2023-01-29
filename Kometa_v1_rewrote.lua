@@ -2098,7 +2098,9 @@ task.spawn(function() while task.wait() do
 				end
 				if not awb then api.tween(1,temptable.gacf(temptable.windy, 5)) task.wait(1) awb = true end
 				if awb and temptable.windy.Name == "Windy" then
-					api.humanoidrootpart().CFrame = temptable.gacf(temptable.windy, 25) temptable.float = true task.wait()
+					--api.humanoidrootpart().CFrame = temptable.gacf(temptable.windy, 25) temptable.float = true task.wait()
+					api.tween(3, temptable.gacf(temptable.windy, 25)) 
+					temptable.float = true task.wait()	
 				end
 			end 
 			enableall()
