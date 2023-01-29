@@ -499,7 +499,7 @@ function farm(trying, important)
 	if not IsToken(trying) then return end
 	if kometa.toggles.faceballoons and findballoon() ~= nil and findballoon():FindFirstChild("BalloonRoot") then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findballoon().BalloonRoot.Position.X, api.humanoidrootpart().Position.Y, findballoon().BalloonRoot.Position.Z)) end
 	if kometa.toggles.faceflames and findclosestflame() ~= nil then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findclosestflame().Position.X, api.humanoidrootpart().Position.Y, findclosestflame().Position.Z)) end
-	if important and kometa.toggles.bloatfarm and temptable.foundpopstar then temptable.float = true api.teleport(CFrame.new(trying.CFrame.Position) * CFrame.Angles(0, math.rad(180), 0)) end
+	if important and kometa.toggles.bloatfarm and temptable.foundpopstar then temptable.float = true api.tween(3, CFrame.new(trying.CFrame.Position) * CFrame.Angles(0, math.rad(180), 0)) end
 	-- if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
 	if kometa.toggles.randomizespeed then api.humanoid().WalkSpeed = math.random(30, 70) end
 	api.humanoid().AutoRotate = false
