@@ -920,7 +920,7 @@ function findbubble()
 	local part;
 	for _, obj in next, game.workspace.Particles:GetChildren() do
 		if string.find(obj.Name, "Bubble") and temptable.running == false then
-			local distance = (api.humanoidrootpart.Position - obj.Position).Magnitude
+			local distance = (api.humanoidrootpart().Position - obj.Position).Magnitude
 			if distance < studs then
 				studs = distance
 				part = obj
