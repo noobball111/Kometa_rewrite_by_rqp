@@ -497,7 +497,8 @@ end
 function statsget() local StatCache = require(game.ReplicatedStorage.ClientStatCache) local stats = StatCache:Get() return stats end
 function farm(trying, important)
 	if not IsToken(trying) then return end
-	if kometa.toggles.faceballoons and findballoon() ~= nil and findballoon():FindFirstChild("BalloonRoot") then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findballoon().BalloonRoot.Position.X, api.humanoidrootpart().Position.Y, findballoon().BalloonRoot.Position.Z)) end
+--	if kometa.toggles.faceballoons and findballoon() ~= nil and findballoon():FindFirstChild("BalloonRoot") then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findballoon().BalloonRoot.Position.X, api.humanoidrootpart().Position.Y, findballoon().BalloonRoot.Position.Z)) end
+	if kometa.toggles.faceballoons and findbubble() ~= nil then local bubble = findbubble() api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(bubble.Position.X, api.humanoidrootpart().Position.Y, bubble.BalloonRoot.Position.Z)) end
 	if kometa.toggles.faceflames and findclosestflame() ~= nil then api.humanoidrootpart().CFrame = CFrame.lookAt(api.humanoidrootpart().Position, Vector3.new(findclosestflame().Position.X, api.humanoidrootpart().Position.Y, findclosestflame().Position.Z)) end
 	if important and kometa.toggles.bloatfarm and temptable.foundpopstar then temptable.float = true api.tween(3, CFrame.new(trying.CFrame.Position) * CFrame.Angles(0, math.rad(180), 0)) end
 	-- if kometa.toggles.loopfarmspeed then game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = kometa.vars.farmspeed end
@@ -897,6 +898,32 @@ function findballoon()
 			if obj:FindFirstChild("PlayerName").Value == game.Players.LocalPlayer.Name then
 				part = obj
 				break
+			end
+		end
+	end
+	return part
+end
+
+function findbubble()
+--	for i,v in next, game.workspace.Particles:GetChildren() do
+--		if string.find(v.Name, "Bubble") and temptable.running == false and tonumber((v.Position-game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude) < temptable.magnitude/1.4 then
+--			if temptable.foundpopstar and kometa.toggles.bloatfarm then
+--				farm(v, true)
+--			else
+--				farm(v)
+--			end
+--			break
+--		end
+--	end
+
+	local studs = math.huge
+	local part;
+	for _, obj in next, game.workspace.Particles:GetChildren() do
+		if string.find(obj.Name, "Bubble") and temptable.running == false then
+			local distance = (api.humanoidrootpart.Position - obj.Position).Magnitude
+			if distance < studs then
+				studs = distance
+				part = obj
 			end
 		end
 	end
