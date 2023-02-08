@@ -1386,6 +1386,7 @@ function UseDispensers()
 			end 
 			task.wait(5)
 			game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+			task.wait(4)
 		end
 	end
 	if kometa.toggles.autoboosters then
